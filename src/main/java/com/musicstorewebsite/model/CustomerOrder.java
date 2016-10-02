@@ -1,12 +1,21 @@
 package com.musicstorewebsite.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by Le on 1/19/2016.
  */
-
+@Getter
+@Setter
 @Entity
 public class CustomerOrder implements Serializable {
 
@@ -33,45 +42,7 @@ public class CustomerOrder implements Serializable {
     private ShippingAddress shippingAddress;
 
 
-    public int getCustomerOrderId() {
-        return customerOrderId;
-    }
-
-    public void setCustomerOrderId(int customerOrderId) {
-        this.customerOrderId = customerOrderId;
-    }
-
-    public Cart getCart() {
-        return cart;
-    }
-
-    public void setCart(Cart cart) {
-        this.cart = cart;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public BillingAddress getBillingAddress() {
-        return billingAddress;
-    }
-
-    public void setBillingAddress(BillingAddress billingAddress) {
-        this.billingAddress = billingAddress;
-    }
-
-    public ShippingAddress getShippingAddress() {
-        return shippingAddress;
-    }
-
-    public void setShippingAddress(ShippingAddress shippingAddress) {
-        this.shippingAddress = shippingAddress;
-    }
+   
 
 
 }
